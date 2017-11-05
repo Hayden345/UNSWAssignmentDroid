@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tax Time With Friends</string>
+    <string name="google_android_map_api_key">AIzaSyA8X872fI8owICKRfCvHd4NHL5tcdh2M8o</string>
+    <string name="title_activity_auto_add_trip_map">Map</string>
+</resources>
