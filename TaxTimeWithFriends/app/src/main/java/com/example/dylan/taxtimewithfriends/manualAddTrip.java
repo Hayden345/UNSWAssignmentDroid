@@ -14,16 +14,12 @@ import com.example.dylan.taxtimewithfriends.Objects.Trip;
 
 public class manualAddTrip extends AppCompatActivity {
 
-
-    private MainActivity parent;
-    private boolean manWork = true;
+    String manWork = "Personal";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_add_trip);
-
-        parent = (MainAcivity)getParent();
     }
 
     public void mainMenuActivity(View v) {
@@ -43,19 +39,21 @@ public class manualAddTrip extends AppCompatActivity {
 
         Switch aSwitch = (Switch) findViewById(R.id.manualSwitch);
 
-        //TODO: Get which log (manLog) is being worked in - should be able to use the parent attribute to access it
-
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
-                    manWork = true;
-                else manWork = false;
+                    manWork = "Personal";
+                else manWork = "Business";
             }
         });
 
+    /*
         Trip trip = new Trip(manOdoStart, manOdoEnd, manDate, manDate, manReason, manWork, manLog);
-        parent.getDb().addTrip(trip);
+        db.execSQL(Trip.toSQLInsert(trip));
+    }
+    */
+
     }
 
 }

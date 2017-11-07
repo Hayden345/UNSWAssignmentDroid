@@ -7,22 +7,12 @@
     tools:context="com.example.dylan.taxtimewithfriends.completeAutoTrip">
 
     <Spinner
-        android:id="@+id/autoDriver"
+        android:id="@+id/autoSpinner"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="145dp"
+        android:layout_marginTop="214dp"
         android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:hint="DRIVER"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/autoVehicle"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="210dp"
-        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -91,14 +81,13 @@
 
     <TextView
         android:id="@+id/autoTripSummary"
-        android:layout_width="0dp"
-        android:layout_height="119dp"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
         android:layout_marginTop="16dp"
         android:background="@android:drawable/editbox_background_normal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/autoReason"

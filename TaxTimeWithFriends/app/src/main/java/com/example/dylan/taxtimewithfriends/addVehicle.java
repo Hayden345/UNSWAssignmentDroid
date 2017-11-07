@@ -9,6 +9,8 @@ import android.widget.Switch;
 
 import com.example.dylan.taxtimewithfriends.Objects.Vehicle;
 
+import static com.example.dylan.taxtimewithfriends.R.id.vehicleYear;
+
 public class addVehicle extends AppCompatActivity {
 
     private MainActivity parent;
@@ -33,13 +35,13 @@ public class addVehicle extends AppCompatActivity {
 
         EditText newModel = (EditText) findViewById(R.id.vehicleModel);
 
-        //TODO: Make a year spinner
-        EditText carYear = (EditText) findViewById(R.id.vehicleYear);
+        EditText carYear = (EditText) findViewById(vehicleYear);
 
         EditText newEngineSize = (EditText) findViewById(R.id.vehicleEngine);
 
         Vehicle vehicle = new Vehicle(parent.getDb().getVehiclesCount()+1, newRego.getText().toString(),
-                newMake.getText().toString(), newModel.getText().toString(), carYear.getDate(), newEngineSize.getText().toString());
+                newMake.getText().toString(), newModel.getText().toString(), Double.parseDouble(carYear.getText().toString()), newEngineSize.getText().toString());
         parent.getDb().addVehicle(vehicle);
     }
+
 }

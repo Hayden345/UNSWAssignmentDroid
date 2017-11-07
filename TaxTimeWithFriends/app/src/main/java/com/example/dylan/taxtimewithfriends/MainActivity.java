@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, logTrip.class));
     }
 
+    public void addExpenseActivity (View v){
+        startActivity(new Intent(MainActivity.this, addExpense.class));
+    }
+
     public void addDriverActivity (View v){
         startActivity(new Intent(MainActivity.this, addDriver.class));
     }
@@ -41,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, addVehicle.class));
     }
 
-    public void addExpenseActivity (View v){
-        startActivity(new Intent(MainActivity.this, addExpense.class));
+    public void addLogActivity (View v) {
+        startActivity (new Intent (MainActivity.this, newLog.class));
     }
 
     public void summaryActivity (View v){
