@@ -135,7 +135,7 @@ public class DBReaderHelper extends SQLiteOpenHelper {
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_REGISTRATION, vehicle.getRegistration());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_MAKE, vehicle.getMake());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_MODEL, vehicle.getModel());
-        values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_YEAR, vehicle.getYear().toString());
+        values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_YEAR, vehicle.getYear());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_ENGINE, vehicle.getEngine());
 
         db.insert(VehicleTable.VehicleTableEntry.TABLE_NAME, null, values);
@@ -161,7 +161,7 @@ public class DBReaderHelper extends SQLiteOpenHelper {
                 cursor.getString(1),
                 cursor.getString(2),
                 cursor.getString(3),
-                new Date(cursor.getString(4)),
+                new Double(cursor.getString(4)),
                 cursor.getString(5));
         return vehicle;
     }
@@ -178,7 +178,7 @@ public class DBReaderHelper extends SQLiteOpenHelper {
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
-                        new Date(cursor.getString(4)),
+                        new Double(cursor.getString(4)),
                         cursor.getString(5));
                 vehicleList.add(vehicle);
             } while (cursor.moveToNext());
@@ -203,7 +203,7 @@ public class DBReaderHelper extends SQLiteOpenHelper {
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_REGISTRATION, vehicle.getRegistration());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_MAKE, vehicle.getMake());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_MODEL, vehicle.getModel());
-        values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_YEAR, vehicle.getYear().toString());
+        values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_YEAR, vehicle.getYear());
         values.put(VehicleTable.VehicleTableEntry.COLUMN_NAME_ENGINE, vehicle.getEngine());
 
         return db.update(VehicleTable.VehicleTableEntry.TABLE_NAME, values,

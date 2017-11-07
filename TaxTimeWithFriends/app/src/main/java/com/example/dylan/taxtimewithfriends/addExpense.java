@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -33,9 +34,7 @@ public class addExpense extends AppCompatActivity {
 
         //TODO: Replace Driver and Vehicle spinners with a LogBook Spinner
 
-        Spinner newDriverExpense = (Spinner) findViewById(R.id.expenseDriver);
-
-        Spinner newExpenseVehicle = (Spinner) findViewById(R.id.expenseVehicle);
+        Spinner newExpenseLog = (Spinner) findViewById(R.id.expenseLog);
 
         EditText newExpenseType = (EditText) findViewById(R.id.expenseType);
 
@@ -43,8 +42,11 @@ public class addExpense extends AppCompatActivity {
 
         Switch bSwitch = (Switch) findViewById(R.id.expenseSwitch);
 
+        DatePicker newExpenseDate = (DatePicker) findViewById(R.id.expenseDate);
+
         //TODO: Add date spinner
         //TODO: Save photo and get file path
+        //TODO: Add code for date, photo, and logbook
 
         bSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -54,9 +56,10 @@ public class addExpense extends AppCompatActivity {
                 else business = false;
             }
         });
-
-        Expense expense = new Expense(parent.getDb().getExpensesCount()+1, newExpenseDate.getDate, Double.parseDouble(newExpenseCost.getText().toString()),
-                newExpenseType.getText().toString(), business, photoFilePath, logBookRowID); //TODO: Add code for date, photo, and logbook
+        /**
+        //TODO: newExpenseDate.getMonth(), newExpenseDate.getYear()  -- Requires modification to SQL statement for month and year
+        Expense expense = new Expense(parent.getDb().getExpensesCount()+1, newExpenseDate.getMonth(), newExpenseDate.getYear(), Double.parseDouble(newExpenseCost.getText().toString()), newExpenseType.getText().toString(), business, photoFilePath, logBookRowID);
         parent.getDb().addExpense(expense);
+         **/
     }
 }

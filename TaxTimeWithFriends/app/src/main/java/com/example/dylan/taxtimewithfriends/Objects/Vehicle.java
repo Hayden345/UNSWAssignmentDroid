@@ -11,10 +11,10 @@ public class Vehicle {
     private String registration;
     private String make;
     private String model;
-    private Date year;
+    private double year;
     private String engine;
 
-    public Vehicle(String registration, String make, String model, Date year, String engine) {
+    public Vehicle(String registration, String make, String model, double year, String engine) {
         this.registration = registration;
         this.make = make;
         this.model = model;
@@ -22,7 +22,7 @@ public class Vehicle {
         this.engine = engine;
     }
 
-    public Vehicle(int rowID, String registration, String make, String model, Date year, String engine) {
+    public Vehicle(int rowID, String registration, String make, String model, double year, String engine) {
         this.rowID = rowID;
         this.registration = registration;
         this.make = make;
@@ -63,11 +63,11 @@ public class Vehicle {
         this.rowID = rowID;
     }
 
-    public Date getYear() {
+    public double getYear() {
         return year;
     }
 
-    public void setYear(Date year) {
+    public void setYear(double year) {
         this.year = year;
     }
 

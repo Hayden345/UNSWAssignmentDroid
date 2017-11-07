@@ -70,19 +70,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/vehicleYear"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="242dp"
-        android:ems="10"
-        android:hint="YEAR"
-        android:inputType="number"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/vehicleEngine"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -94,4 +81,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/vehicleYear"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="242dp"
+        android:ems="10"
+        android:hint="YEAR"
+        android:inputType="number"
+        android:maxLength="4"
+        android:selectAllOnFocus="false"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
